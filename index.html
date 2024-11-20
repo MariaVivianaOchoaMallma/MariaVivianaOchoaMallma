@@ -6,6 +6,13 @@
     <meta name="description" content="Página personal de María Viviana Ochoa Mallma - Estudiante de Administración de Negocios en la Universidad Católica San Pablo">
     <title>María Viviana Ochoa Mallma - Página Personal</title>
     <style>
+body {
+    background-image: url('https://i.ibb.co/ZV2Rk0R/450794178-brightness-adjusted.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
         :root {
             --primary-color: #cc2936; /* Color rojo principal */
             --primary-dark: #a61f2b; /* Rojo más oscuro */
@@ -164,7 +171,30 @@
                 text-align: center;
             }
         }
-    </style>
+    
+        .hidden {
+            display: none;
+            margin-top: 10px;
+            padding: 0;
+            list-style: none;
+        }
+
+        .toggle-button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+
+        .toggle-button:hover {
+            background-color: var(--primary-dark);
+        }
+
+</style>
 </head>
 <body>
     <div class="container">
@@ -174,7 +204,10 @@
 
         <div class="section">
             <div class="profile-section">
-                <img src="https://scontent.faqp2-1.fna.fbcdn.net/v/t39.30808-6/438817684_3730990437148325_1270714145482812701_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeFRHietOcz5FScsVZK4UJAvHXeTFqc41rgdd5MWpzjWuK4e78yAmVo7ArPn_adAvxtqm_nRu17_4ArSnLNLY26m&_nc_ohc=L5-taQaGoDUQ7kNvgHnJnbH&_nc_zt=23&_nc_ht=scontent.faqp2-1.fna&_nc_gid=AtzyOEcWWPyLWy42-hs-W-X&oh=00_AYBjUNQKX-_aP4P-JSSJjnX4La7ST6cL90F2x0_NB2cuTw&oe=6720DE4D" alt="Descripción de la imagen">
+                <img src="https://i.ibb.co/vskNNkP/438817684-3730990437148325-1270714145482812701-n.jpg" 
+     alt="Descripción de la imagen" 
+     style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+
                 
                 <div>
                     <h2>Perfil Profesional</h2>
@@ -233,9 +266,61 @@
             </div>
         </div>
 
+        
         <div class="section">
+            <h2>Cursos y Certificaciones</h2>
+            <div id="toggleCursos" class="toggle-section">
+                <button onclick="toggleContent()" class="toggle-button">Mostrar/Ocultar Cursos</button>
+                <ul id="cursosList" class="hidden">
+                    <li>Comunicación I</li>
+                    <li>Fundamentos de Administración</li>
+                    <li>Fundamentos de Contabilidad</li>
+                    <li>Fundamentos de Marketing</li>
+                    <li>Introducción a la Vida Universitaria</li>
+                    <li>Matemática Básica</li>
+                    <li>Metodología del Estudio</li>
+                    <li>Álgebra y Geometría</li>
+                    <li>Apreciación Musical</li>
+                    <li>Cálculo Financiero</li>
+                    <li>Comportamiento del Consumidor</li>
+                    <li>Comunicación II</li>
+                    <li>Derecho Empresarial I</li>
+                    <li>Introducción a la Filosofía</li>
+                    <li>Oratoria</li>
+                    <li>Análisis y Diseño de Procesos</li>
+                    <li>Antropología Filosófica y Teológica</li>
+                    <li>Apreciación Literaria</li>
+                    <li>Cálculo en una Variable</li>
+                    <li>Comportamiento Organizacional</li>
+                    <li>Costos Gerenciales</li>
+                    <li>Derecho Empresarial II</li>
+                    <li>Lógica y Argumentación</li>
+                    <li>Costos y Presupuestos</li>
+                    <li>Gnoseología</li>
+                    <li>Investigación de Mercados</li>
+                    <li>Macroeconomía I</li>
+                    <li>Planeamiento y Control Presupuestal</li>
+                    <li>Taller de Investigación</li>
+                    <li>Cómputo</li>
+                    <li>Contabilidad Gerencial</li>
+                    <li>Creación y Organización de Empresas</li>
+                    <li>Historia de la Cultura Occidental I</li>
+                    <li>Macroeconomía II</li>
+                    <li>Psicología</li>
+                </ul>
+            </div>
+        </div>
+
+<div class="section">
             <h2>Compañeros de Clase</h2>
-            <p>Esta sección se actualizará próximamente con enlaces a las páginas web de mis compañeros de clase.</p>
+            
+        <ul>
+            <li><strong>Briggite Sheyla</strong> - <a href="https://Briggite-sheyla.github.io" target="_blank">https://Briggite-sheyla.github.io</a></li>
+            <li><strong>Allison Santan</strong> - <a href="http://allisonsantandermamani.neocities.org" target="_blank">http://allisonsantandermamani.neocities.org</a></li>
+            <li><strong>Aylen Elena Yucra Nina</strong> - <a href="https://ayleneyn.github.io/AYLEN-ELENA-YUCRA-NINA/" target="_blank">https://ayleneyn.github.io/AYLEN-ELENA-YUCRA-NINA/</a></li>
+            <li><strong>Andrea</strong> - <a href="https://andreaoliden123.github.io/" target="_blank">https://andreaoliden123.github.io/</a></li>
+        </ul>
+
         </div>
     </div>
     
@@ -254,6 +339,14 @@
             observer.observe(section);
         });
     </script>
+
+    <script>
+        function toggleContent() {
+            const cursosList = document.getElementById('cursosList');
+            cursosList.classList.toggle('hidden');
+        }
+    </script>
+
 </body>
 </html>
 
